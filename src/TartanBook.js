@@ -39,7 +39,7 @@ class TartanBook extends Component {
       <div className="tartanbook">
         <div class="center">
         </div>
-        <div class="filters">
+        {/* <div class="filters">
           <div className="row">
             <div className="col">
               <select onChange={this.updateFilter} className="form-control">
@@ -56,7 +56,7 @@ class TartanBook extends Component {
               </select>
             </div>
           </div>
-        </div>     
+        </div> */}     
         {this.getVendors(this.props.data)}
       </div>
     );

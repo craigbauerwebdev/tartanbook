@@ -40,6 +40,24 @@ class App extends Component {
             <Router>
               <header>
                 <h1>Tartan Book</h1>
+              <div className="filters">
+                <div className="row">
+                  <div className="col">
+                    <select onChange={this.updateFilter} className="form-control">
+                      <option value="All Vendors">All Vendors</option>
+                      <option value="Photographers">Photographers</option>
+                      <option value="Bands">Bands</option>
+                    </select>
+                  </div>
+                  <div className="col">
+                    <select onChange={this.updateFilter} className="form-control">
+                      <option value="All Locations">All Locations</option>
+                      <option value="Edinburgh">Edinburgh</option>
+                      <option value="Glasgow">Glasgow</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
               </header>
               <Switch>
                 <Route exact path="/">
