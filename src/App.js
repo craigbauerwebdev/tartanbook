@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Header from "./Header";
 import Login from './Login';
 import TartanBook from './TartanBook';
 
@@ -40,15 +41,15 @@ class App extends Component {
     if (sortType === "vendorType") {
       this.setState({
         vendorType: e.target.value
-      }, () => this.filterStuff());
+      }, () => this.filterVendors());
     } else if (sortType === "location") {
       this.setState({
         location: e.target.value
-      }, () => this.filterStuff());
+      }, () => this.filterVendors());
     }
   }
 
-  filterStuff = () => {
+  filterVendors = () => {
     const 
       {allVendors, vendorType, location} = this.state,
       obj = { vendor: vendorType, location: location };
@@ -57,53 +58,21 @@ class App extends Component {
         console.log("Orig: ", v.vendor_type, "ToMatch: ", obj.vendor);
         console.log("Orig: ", v.location, "ToMatch: ", obj.location);
         return (
-          v.vendor_type === obj.vendor || 
-          obj.vendor === "AllVendors") && 
-          (v.location === obj.location || 
-          obj.location === "AllLocations"
+          (v.vendor_type === obj.vendor || obj.vendor === "AllVendors") && 
+          (v.location === obj.location || obj.location === "AllLocations")
         );
-        /* if(obj.vendor === "AllVendors" && obj.location === "AllLocations") {
-          return allVendors;
-        } else if (obj.vendor === "AllVendors") {
-          return v.location === obj.location;
-        } else if (obj.location === "AllLocations") {
-          return v.vendor_type === obj.vendor;
-        } else {
-          return v.vendor_type === obj.vendor && v.location === obj.location;
-        }   */ 
       })
     })
   }
 
   render() {
+    const { vendorType, location } = this.state;
     if (this.state.sortedVendors) {
       return (
         <div className="App">
           {/* <AuthProvider> */}
             <Router>
-              <header>
-                <h1>Tartan Book</h1>
-                <div className="filters">
-                  <div className="row">
-                    <div className="col">
-                      <select onChange={(e) => this.sortBy(e, "vendorType")} className="form-control">
-                        <option value="AllVendors">All Vendors</option>
-                        <option value="Photographers">Photographers</option>
-                        <option value="Bands">Bands</option>
-                        <option value="Officiants">Officiants</option>
-                      </select>
-                    </div>
-                    <div className="col">
-                      <select onChange={(e) => this.sortBy(e, "location")} className="form-control">
-                        <option value="AllLocations">All Locations</option>
-                        <option value="Edinburgh">Edinburgh</option>
-                        <option value="Glasgow">Glasgow</option>
-                        <option value="Inverness">Invernes</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </header>
+              <Header sortBy={this.sortBy} vendorType={vendorType} location={location} />
               <Switch>
                 <Route exact path="/">
                   <Login />
