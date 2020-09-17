@@ -14,18 +14,17 @@ class TartanBook extends Component {
   }
 
   getVendors = (vendors) => {
-    
+    const randomVendors = vendors.sort(() => {
+      return .5 - Math.random();
+    });
     return (
-      vendors.map((vendor) => {
-        {/* <Vendor vendors={vendor} /> */}
+      randomVendors.map((vendor) => {
         const imgStyle = {
           backgroundImage: "url("+vendor.fimg_url+")",
           backgroundSize: "cover"
         }
         const markup = <div key={vendor.id} className="vendor clearfix">
-          <div className="image-container" style={imgStyle}>
-            {/* <img src={vendor.fimg_url} /> */}
-          </div>
+          <div className="image-container" style={imgStyle}></div>
           <div className="meta">
             <h2>{vendor.title.rendered}</h2>
             <strong>{vendor.vendor_type}</strong>

@@ -11,7 +11,6 @@ class Filters extends Component {
 
   render() {
     const { sortBy, vendorType, location, vendorFilters, locationFilters} = this.props;
-    console.log()
     return (      
         <div className="filters">
             <div className="row">
