@@ -10,24 +10,25 @@ class Filters extends Component {
   } */
 
   render() {
-    const { sortBy, vendorType, location} = this.props;
+    const { sortBy, vendorType, location, vendorFilters, locationFilters} = this.props;
+    console.log()
     return (      
         <div className="filters">
             <div className="row">
                 <div className="col">
                     <select value={vendorType} onChange={(e) => sortBy(e, "vendorType")} className="form-control">
                         <option value="AllVendors">All Vendors</option>
-                        <option value="Photographers">Photographers</option>
-                        <option value="Bands">Bands</option>
-                        <option value="Officiants">Officiants</option>
+                        {vendorFilters.map((ven) => {
+                            return <option value={ven}>{ven}</option>
+                        })}
                     </select>
                 </div>
                 <div className="col">
                     <select value={location} onChange={(e) => sortBy(e, "location")} className="form-control">
                         <option value="AllLocations">All Locations</option>
-                        <option value="Edinburgh">Edinburgh</option>
-                        <option value="Glasgow">Glasgow</option>
-                        <option value="Inverness">Invernes</option>
+                        {locationFilters.map((loc) => {
+                            return <option value={loc}>{loc}</option>
+                        })}
                     </select>
                 </div>
             </div>
