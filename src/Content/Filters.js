@@ -18,7 +18,8 @@ class Filters extends Component {
                     <select value={vendorType} onChange={(e) => sortBy(e, "vendorType")} className="form-control">
                         <option value="AllVendors">All Vendors</option>
                         {vendorFilters.map((ven) => {
-                            return <option value={ven}>{ven}</option>
+                            //console.log(ven);
+                            return <option key={ven} value={ven}>{ven}</option>
                         })}
                     </select>
                 </div>
@@ -26,7 +27,8 @@ class Filters extends Component {
                     <select value={location} onChange={(e) => sortBy(e, "location")} className="form-control">
                         <option value="AllLocations">All Locations</option>
                         {locationFilters.map((loc) => {
-                            return <option value={loc}>{loc}</option>
+                            //console.log(loc);
+                            return <option key={loc} value={loc}>{loc}</option>
                         })}
                     </select>
                 </div>

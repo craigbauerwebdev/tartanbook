@@ -32,13 +32,14 @@ class TartanBook extends Component {
             <p>{vendor.description}</p>
           </div>
         </div>;
+        console.log(markup);
         return markup;
       })
     );
   }
 
   render() {
-    const { sortBy, vendorType, location, vendorFilters, locationFilters } = this.props;
+    const { sortBy, vendorType, location, vendorFilters, locationFilters, data } = this.props;
     /* const TBStyle = {
       color: "#fff"
     } */
@@ -47,10 +48,10 @@ class TartanBook extends Component {
         <div className="center">
           <Filters vendorType={vendorType} location={location} sortBy={sortBy} vendorFilters={vendorFilters} locationFilters={locationFilters} />
         </div>
-        {this.props.data.length &&
+        {!!data.length && //boolean casted
           this.getVendors(this.props.data)
         }
-        {!this.props.data.length &&
+        {!data.length &&
           <p className="error-message">Sorry there are no vendors available...</p>
         }  
         

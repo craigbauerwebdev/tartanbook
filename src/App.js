@@ -36,11 +36,11 @@ class App extends Component {
   }
 
   getFilters() {
-    console.log("getting filters");
+    //console.log("getting filters");
     const { allVendors } = this.state;
 
     let vendorTypes = allVendors.map((ven) => {
-      console.log(ven.vendor_type);
+      //console.log(ven.vendor_type);
       if (ven.vendor_type) {
         return ven.vendor_type;
       }
@@ -76,8 +76,8 @@ class App extends Component {
       obj = { vendor: vendorType, location: location };
     this.setState({ 
       sortedVendors: allVendors.filter(v => {
-        console.log("Orig: ", v.vendor_type, "ToMatch: ", obj.vendor);
-        console.log("Orig: ", v.location, "ToMatch: ", obj.location);
+        //console.log("Orig: ", v.vendor_type, "ToMatch: ", obj.vendor);
+        //console.log("Orig: ", v.location, "ToMatch: ", obj.location);
         return (
           (v.vendor_type === obj.vendor || obj.vendor === "AllVendors") && 
           (v.location === obj.location || obj.location === "AllLocations")
