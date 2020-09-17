@@ -5,30 +5,39 @@
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  background-image: url("/tartan_bkg.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top; }
+  background-image: url("/pink_rice.png"); }
   body .center {
     text-align: center; }
+  body select {
+    font-size: 14px !important; }
+  body .clearfix::after {
+    content: "";
+    clear: both;
+    display: table; }
 
 header {
   background: #405464;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  padding: 10px 20px 5px 20px; }
+  padding: 10px 20px 5px 20px;
+  z-index: 9; }
   header h1 {
     font-size: 36px;
     font-family: 'Roboto Slab', serif;
     color: #fff; }
-  header .filters {
-    min-width: 500px;
+  header nav {
     margin: 0 auto;
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%); }
+    header nav li {
+      float: left;
+      list-style: none;
+      padding-left: 45px;
+      font-size: 20px;
+      color: #fff; }
 
 @media screen and (max-width: 800px) {
   header {
@@ -39,3 +48,24 @@ header {
       right: initial;
       transform: none;
       min-width: 100%; } }
+
+.tartanbook {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto; }
+  .tartanbook .filters {
+    max-width: 500px;
+    margin: 0 auto 15px auto; }
+  .tartanbook .vendor {
+    color: #fff;
+    background: rgba(64, 84, 100, 0.8);
+    padding: 15px;
+    margin-bottom: 30px; }
+    .tartanbook .vendor .image-container {
+      float: left;
+      width: 30%;
+      padding-top: 25%;
+      overflow: hidden; }
+    .tartanbook .vendor .meta {
+      float: right;
+      width: calc(70% - 30px); }

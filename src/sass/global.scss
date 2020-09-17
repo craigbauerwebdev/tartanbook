@@ -8,13 +8,16 @@
 }
 
 body {
-    background-image: url("/tartan_bkg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
+    background-image: url("/pink_rice.png");
     .center {
-    text-align: center;
+        text-align: center;
+    }
+    select {
+        font-size: 14px!important;
+    }
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
     }
 }
-
-

@@ -1,0 +1,25 @@
+.tartanbook {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    .filters {
+        max-width: 500px;
+        margin: 0 auto 15px auto;
+    }
+    .vendor {
+        color: #fff;
+        background: rgba(64, 84, 100, .8);
+        padding: 15px;
+        margin-bottom: 30px;
+        .image-container {
+            float: left;
+            width: 30%;
+            padding-top: 25%;
+            overflow: hidden;
+        }
+        .meta {
+            float: right;
+            width: calc(70% - 30px);
+        }
+    }
+}

@@ -2,15 +2,12 @@ import React, {Component} from 'react';
 //import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class Filters extends Component {
-
-  constructor(props) {
+  /* constructor(props) {
     super(props);
     this.state = {
       
     };
-  }
-
-  
+  } */
 
   render() {
     const { sortBy, vendorType, location} = this.props;

@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Header from "./Header";
-import Login from './Login';
-import TartanBook from './TartanBook';
-
-
+import Header from "./Template/Header";
+import Login from './Auth/Login';
+import TartanBook from './Content/TartanBook';
 
 class App extends Component {
   constructor(props) {
@@ -30,11 +28,34 @@ class App extends Component {
         this.setState({ 
           allVendors: json,
           sortedVendors: json
-        })
+        }, () => this.getFilters())
       })
       .catch(e => {
         console.log("error: ", e);
       });
+  }
+
+  getFilters() {
+    console.log("getting filters");
+    const { allVendors } = this.state;
+
+    let vendorTypes = allVendors.map((ven) => {
+      console.log(ven.vendor_type);
+      if (ven.vendor_type) {
+        return ven.vendor_type;
+      }
+      return null;
+    })
+    let locations = allVendors.map((loc) => {
+      if(loc.location) {
+        return loc.location;
+      }
+      return null;
+    })
+    this.setState({
+      vendorFilters: [...new Set(vendorTypes)],
+      locationFilters: [...new Set(locations)]
+    })
   }
 
   sortBy(e, sortType) {
@@ -66,19 +87,25 @@ class App extends Component {
   }
 
   render() {
-    const { vendorType, location } = this.state;
-    if (this.state.sortedVendors) {
+    const { sortedVendors, vendorType, location, vendorFilters, locationFilters } = this.state;
+    if (sortedVendors && vendorFilters && locationFilters) {
       return (
         <div className="App">
           {/* <AuthProvider> */}
             <Router>
-              <Header sortBy={this.sortBy} vendorType={vendorType} location={location} />
+              <Header />
               <Switch>
                 <Route exact path="/">
                   <Login />
                 </Route>
-                <Route path="/home">  
-                  <TartanBook data={this.state.sortedVendors} />
+                <Route path="/vendors">  
+                  <TartanBook 
+                    data={this.state.sortedVendors} 
+                    sortBy={this.sortBy} 
+                    vendorType={vendorType} 
+                    location={location}
+                    vendorFilters={vendorFilters}
+                    locationFilters={locationFilters} />
                 </Route>
               </Switch>
               <p>Footer</p>

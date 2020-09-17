@@ -4,18 +4,25 @@ header {
     position: -webkit-sticky;
     top: 0;
     padding: 10px 20px 5px 20px;
+    z-index: 9;
     h1 {
         font-size: 36px;
         font-family: 'Roboto Slab', serif;
         color: #fff;
     }
-    .filters {
-        min-width: 500px;
+    nav {
         margin: 0 auto;
         position: absolute;
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
+        li {
+            float: left;
+            list-style: none;
+            padding-left: 45px;
+            font-size: 20px;
+            color: #fff;
+        }
     }
 }
 

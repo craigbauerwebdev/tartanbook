@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import Filters from "./Filters";
+import Nav from './Nav';
 //import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class Header extends Component {
@@ -14,12 +14,11 @@ class Header extends Component {
   
 
   render() {
-    const {sortBy, vendorType, location} = this.props;
     return (
         <Fragment>
             <header>
                 <h1>Tartan Book</h1>
-                <Filters vendorType={vendorType} location={location} sortBy={sortBy} />
+                <Nav />
             </header>
         </Fragment>
     );
