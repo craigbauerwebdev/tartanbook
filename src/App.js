@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./Template/Header";
+import Footer from "./Template/Footer";
 import Login from './Auth/Login';
 import TartanBook from './Content/TartanBook';
 
@@ -108,7 +109,7 @@ class App extends Component {
                     locationFilters={locationFilters} />
                 </Route>
               </Switch>
-              <p>Footer</p>
+              <Footer />
             </Router>
           {/* </AuthProvider> */}
         </div>

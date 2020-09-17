@@ -1,0 +1,26 @@
+footer {
+    text-align: center;
+    background: #405464;
+    color: #fff;
+    a, a:visited {
+        color: pink;
+    }
+    nav {
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        li {
+            float: left;
+            list-style: none;
+            padding-left: 45px;
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    
+}

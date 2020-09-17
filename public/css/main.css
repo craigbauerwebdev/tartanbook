@@ -49,6 +49,25 @@ header {
       transform: none;
       min-width: 100%; } }
 
+footer {
+  text-align: center;
+  background: #405464;
+  color: #fff; }
+  footer a, footer a:visited {
+    color: pink; }
+  footer nav {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%); }
+    footer nav li {
+      float: left;
+      list-style: none;
+      padding-left: 45px;
+      font-size: 20px;
+      color: #fff; }
+
 .tartanbook {
   padding: 20px;
   max-width: 1000px;
