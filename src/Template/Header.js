@@ -1,17 +1,12 @@
 import React, {Component, Fragment} from 'react';
 import Nav from './Nav';
-//import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class Header extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      
-    };
+    this.state = {};
   }
-
-  
 
   render() {
     return (

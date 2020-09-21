@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Filters from "../Content/Filters";
+import Filters from "./Filters";
+
 //import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class TartanBook extends Component {
@@ -32,7 +33,7 @@ class TartanBook extends Component {
             <p>{vendor.description}</p>
           </div>
         </div>;
-        console.log(markup);
+        //console.log(markup);
         return markup;
       })
     );
@@ -44,6 +45,7 @@ class TartanBook extends Component {
       color: "#fff"
     } */
     return (
+      
       <div className="tartanbook">
         <div className="center">
           <Filters vendorType={vendorType} location={location} sortBy={sortBy} vendorFilters={vendorFilters} locationFilters={locationFilters} />
