@@ -6,12 +6,18 @@ import Footer from "./Template/Footer";
 //import Tartanbook from './Tartanbook';
 import Vendors from './Content/Vendors';
 import Faqs from './Content/Faqs';
+import VendorsPage from './Pages/VendorsPage';
 import app from './Auth/Base';
+//import TartanBook from './Content/Vendors';
 
 //import { AuthProvider } from './Auth/Auth';
 //import PrivateRoute from './Auth/PrivateRoute';
 
-class App extends Component {
+const NotFound = () => {
+  return <h1>404</h1>;
+}
+
+class TartanBook extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -83,8 +89,6 @@ class App extends Component {
       obj = { vendor: vendorType, location: location };
     this.setState({
       sortedVendors: allVendors.filter(v => {
-        //console.log("Orig: ", v.vendor_type, "ToMatch: ", obj.vendor);
-        //console.log("Orig: ", v.location, "ToMatch: ", obj.location);
         return (
           (v.vendor_type === obj.vendor || obj.vendor === "AllVendors") &&
           (v.location === obj.location || obj.location === "AllLocations")
@@ -101,9 +105,13 @@ class App extends Component {
         <div className="App">
           <Header />
             <button style={{ float: "right" }} onClick={() => app.auth().signOut()}>Sign Out</button>  
-            <Router>
-              <Switch>
-              <Route exact path="/home">
+            {/* <Router>
+              <Switch> */}
+                <p>Welcome to TartanBook</p>
+                <Route path="/app/vendors" component={VendorsPage} />
+                <Route path="/app/help" component={Faqs} />
+                <Route component={NotFound} />
+              {/* <Route exact path="/home">
                 <Vendors
                   data={this.state.sortedVendors}
                   sortBy={this.sortBy}
@@ -112,9 +120,9 @@ class App extends Component {
                   vendorFilters={vendorFilters}
                   locationFilters={locationFilters} />
               </Route>
-              <Route path="/help" component={Faqs} /> 
-              </Switch>
-              </Router>   
+              <Route path="/help" component={Faqs} />  */}
+              {/* </Switch>
+              </Router>    */}
             <Footer />           
         </div>
         </Fragment>
@@ -132,4 +140,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default TartanBook;

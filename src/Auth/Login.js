@@ -3,7 +3,7 @@ import { withRouter, Redirect } from "react-router";
 import app from "./Base.js";
 import { AuthContext } from "./Auth";
 
-const redir = "/home";
+const redir = "/app";
 
 const Login = ({ history }) => {
   const handleLogin = useCallback(

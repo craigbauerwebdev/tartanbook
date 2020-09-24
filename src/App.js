@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   componentDidMount() {}
-    
 
   render() { 
     return (
@@ -31,7 +30,7 @@ class App extends Component {
                 <Login />
               </Route>
               <PrivateRoute 
-                exact path="/home" 
+                path="/app" 
                 component={Tartanbook} 
               />
             </Switch>    

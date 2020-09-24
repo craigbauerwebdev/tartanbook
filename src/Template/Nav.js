@@ -7,8 +7,8 @@ class Nav extends Component {
         <nav>
             <ul>
                 {/* <Link to="/venues" label="Venues"><li>Venues</li></Link> */}
-                <Link to="/vendors" label="Vendors"><li>Vendors</li></Link>
-                <Link to="/help" label="Help"><li>Help</li></Link>
+                <Link to="/app/vendors" label="Vendors"><li>Vendors</li></Link>
+                <Link to="/app/help" label="Help"><li>Help</li></Link>
             </ul>   
         </nav>
     );
