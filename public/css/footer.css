@@ -4,6 +4,9 @@ footer {
   color: #fff; }
   footer a, footer a:visited {
     color: pink; }
+  footer .logo {
+    width: 90%;
+    max-width: 400px; }
   footer nav {
     margin: 0 auto;
     position: absolute;

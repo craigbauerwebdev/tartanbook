@@ -12,7 +12,7 @@ class Header extends Component {
     return (
         <Fragment>
             <header>
-                <h1>Tartan Book</h1>
+                <img alt="tartanbook logo" className="logo" src={process.env.PUBLIC_URL + "/images/tb-logo.png"} />
                 <Nav />
             </header>
         </Fragment>

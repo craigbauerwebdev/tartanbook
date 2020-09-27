@@ -13,9 +13,9 @@ import app from './Auth/Base';
 //import { AuthProvider } from './Auth/Auth';
 //import PrivateRoute from './Auth/PrivateRoute';
 
-const NotFound = () => {
+/* const NotFound = () => {
   return <h1>404</h1>;
-}
+} */
 
 class TartanBook extends Component {
   constructor(props) {
@@ -105,13 +105,9 @@ class TartanBook extends Component {
         <div className="App">
           <Header />
             <button style={{ float: "right" }} onClick={() => app.auth().signOut()}>Sign Out</button>  
-            {/* <Router>
-              <Switch> */}
-                <p>Welcome to TartanBook</p>
-                <Route path="/app/vendors" component={VendorsPage} />
-                <Route path="/app/help" component={Faqs} />
-                <Route component={NotFound} />
-              {/* <Route exact path="/home">
+ 
+              <Route path="/app/help" component={Faqs} />  
+              <Route exact path="/app/vendors">
                 <Vendors
                   data={this.state.sortedVendors}
                   sortBy={this.sortBy}
@@ -120,9 +116,9 @@ class TartanBook extends Component {
                   vendorFilters={vendorFilters}
                   locationFilters={locationFilters} />
               </Route>
-              <Route path="/help" component={Faqs} />  */}
               {/* </Switch>
               </Router>    */}
+            <Redirect to="/app/vendors" />
             <Footer />           
         </div>
         </Fragment>

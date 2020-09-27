@@ -9,6 +9,10 @@ header {
     font-size: 36px;
     font-family: 'Roboto Slab', serif;
     color: #fff; }
+  header .logo {
+    height: 42px;
+    margin-top: 3px;
+    margin-bottom: 8px; }
   header nav {
     margin: 0 auto;
     position: absolute;

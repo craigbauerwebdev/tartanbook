@@ -17,7 +17,7 @@ class Footer extends Component {
     return (
         <Fragment>
             <footer>
-                <h1>Tartan Book</h1>
+                <img alt="tartanbook logo" className="logo" src={process.env.PUBLIC_URL + "/images/tb-logo.png"} />
                 <a href="http://tartanweddings.com">Back to Tartan Weddings</a>
             </footer>
         </Fragment>
