@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Header from "./Template/Header";
 import Footer from "./Template/Footer";
 import Login from './Auth/Login';
@@ -24,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">    
         <AuthProvider>
-          <Router>
+          <HashRouter>
             <Switch>
               <Route exact path="/">
                 <Login />
@@ -34,7 +35,7 @@ class App extends Component {
                 component={Tartanbook} 
               />
             </Switch>    
-          </Router>  
+          </HashRouter>  
         </AuthProvider>  
       </div>
     );

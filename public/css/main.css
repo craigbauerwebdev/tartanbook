@@ -5,7 +5,7 @@
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  background-image: url("/pink_rice.png"); }
+  background-image: url("/images/pink-tartan-bkg.jpg"); }
   body .center {
     text-align: center; }
   body select {
@@ -99,6 +99,7 @@ header {
       min-width: 100%; } }
 
 footer {
+  padding: 60px 0;
   text-align: center;
   background: #405464;
   color: #fff; }

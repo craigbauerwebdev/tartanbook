@@ -30,7 +30,7 @@ class TartanBook extends Component {
   }
 
   componentDidMount() {
-    fetch("https://cors-anywhere.herokuapp.com/http://tartanweddings.com/wp-json/wp/v2/tartanbook", {
+    fetch("http://tartanweddings.com/wp-json/wp/v2/tartanbook", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
