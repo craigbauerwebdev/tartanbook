@@ -32,6 +32,10 @@ class TartanBook extends Component {
             <p><i>{vendor.location}</i></p>
             <p>{vendor.description}</p>
           </div>
+          <div className="meta links">
+            <img alt="instagram logo" src={process.env.PUBLIC_URL + "/images/instagram.png"} width="35" />
+            <img alt="website logo" src={process.env.PUBLIC_URL + "/images/website.png"} width="35" />
+          </div>
         </div>;
         //console.log(markup);
         return markup;
@@ -46,7 +50,7 @@ class TartanBook extends Component {
     } */
     return (
       
-      <div className="tartanbook">
+      <div className="tartanbook vendors-page">
         <div className="center">
           <Filters vendorType={vendorType} location={location} sortBy={sortBy} vendorFilters={vendorFilters} locationFilters={locationFilters} />
         </div>

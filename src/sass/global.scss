@@ -8,6 +8,13 @@
 }
 
 body {
+    h1, h2 {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 40px;
+    }
+    h1 {
+        color: rgba(64, 84, 100, 1);
+    }
     background-image: url("/images/pink-tartan-bkg.jpg");
     .center {
         text-align: center;

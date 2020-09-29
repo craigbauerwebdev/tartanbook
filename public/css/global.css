@@ -6,6 +6,11 @@
 
 body {
   background-image: url("/images/pink-tartan-bkg.jpg"); }
+  body h1, body h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px; }
+  body h1 {
+    color: #405464; }
   body .center {
     text-align: center; }
   body select {

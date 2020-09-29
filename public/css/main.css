@@ -6,6 +6,11 @@
 
 body {
   background-image: url("/images/pink-tartan-bkg.jpg"); }
+  body h1, body h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px; }
+  body h1 {
+    color: #405464; }
   body .center {
     text-align: center; }
   body select {
@@ -125,19 +130,21 @@ footer {
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto; }
-  .tartanbook .filters {
-    max-width: 500px;
-    margin: 0 auto 15px auto; }
-  .tartanbook .vendor {
-    color: #fff;
-    background: rgba(64, 84, 100, 0.8);
-    padding: 15px;
-    margin-bottom: 30px; }
-    .tartanbook .vendor .image-container {
-      float: left;
-      width: 30%;
-      padding-top: 25%;
-      overflow: hidden; }
-    .tartanbook .vendor .meta {
-      float: right;
-      width: calc(70% - 30px); }
+
+.vendors-page .filters {
+  max-width: 500px;
+  margin: 0 auto 15px auto; }
+
+.vendors-page .vendor {
+  color: #fff;
+  background: rgba(64, 84, 100, 0.8);
+  padding: 15px;
+  margin-bottom: 30px; }
+  .vendors-page .vendor .image-container {
+    float: left;
+    width: 30%;
+    padding-top: 25%;
+    overflow: hidden; }
+  .vendors-page .vendor .meta {
+    float: right;
+    width: calc(70% - 30px); }

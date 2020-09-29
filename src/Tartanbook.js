@@ -6,7 +6,7 @@ import Footer from "./Template/Footer";
 //import Tartanbook from './Tartanbook';
 import Vendors from './Content/Vendors';
 import Faqs from './Content/Faqs';
-import VendorsPage from './Pages/VendorsPage';
+//import VendorsPage from './Pages/VendorsPage';
 import app from './Auth/Base';
 //import TartanBook from './Content/Vendors';
 
