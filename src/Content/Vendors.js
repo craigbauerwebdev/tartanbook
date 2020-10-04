@@ -35,6 +35,7 @@ class TartanBook extends Component {
           <div className="meta links">
             <img alt="instagram logo" src={process.env.PUBLIC_URL + "/images/instagram.png"} width="35" />
             <img alt="website logo" src={process.env.PUBLIC_URL + "/images/website.png"} width="35" />
+            <i className="large material-icons">favorite_border</i><i className="large material-icons">favorite</i>
           </div>
         </div>;
         //console.log(markup);

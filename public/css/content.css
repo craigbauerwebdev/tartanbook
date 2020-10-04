@@ -20,3 +20,5 @@
   .vendors-page .vendor .meta {
     float: right;
     width: calc(70% - 30px); }
+  .vendors-page .vendor .meta.links img {
+    margin-right: 20px; }

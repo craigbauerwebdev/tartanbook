@@ -24,5 +24,12 @@
             float: right;
             width: calc(70% - 30px);
         }
+        .meta {
+            &.links {
+                img {
+                    margin-right: 20px;
+                }
+            }
+        }
     }
 }

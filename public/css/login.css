@@ -1,0 +1,11 @@
+.login-page {
+  padding: 60px 20px 0 20px; }
+  .login-page .form-wrap {
+    max-width: 400px;
+    margin: 0 auto; }
+  .login-page label, .login-page input, .login-page button {
+    display: block; }
+  .login-page input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px; }

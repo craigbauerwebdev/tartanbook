@@ -5,7 +5,8 @@
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  background-image: url("/images/pink-tartan-bkg.jpg"); }
+  background-image: url("/images/pink-tartan-bkg.jpg");
+  background-attachment: fixed; }
   body h1, body h2 {
     font-family: 'Kaushan Script', cursive;
     font-size: 40px; }

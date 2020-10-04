@@ -33,18 +33,20 @@ const Login = ({ history }) => {
 
   return (
     <div className="login-page">
-      <h1>LogIn</h1>
-      <form onSubmit={handleLogin}>
-        <label>
-          Email
-            <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-            <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Log In</button>
-      </form>
+      <div className="form-wrap">
+        <h1>LogIn</h1>
+        <form onSubmit={handleLogin}>
+          <label>
+            Email</label>
+              <input name="email" type="email" placeholder="Email" />
+          
+          <label>
+            Password</label>
+              <input name="password" type="password" placeholder="Password" />
+          
+          <button type="submit">Log In</button>
+        </form>
+      </div>
     </div>
   )
 }
