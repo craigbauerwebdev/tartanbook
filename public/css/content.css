@@ -8,10 +8,13 @@
   margin: 0 auto 15px auto; }
 
 .vendors-page .vendor {
+  position: relative;
   color: #fff;
   background: rgba(64, 84, 100, 0.8);
   padding: 15px;
   margin-bottom: 30px; }
+  .vendors-page .vendor h2 {
+    width: calc(100% - 60px); }
   .vendors-page .vendor .image-container {
     float: left;
     width: 30%;
@@ -22,3 +25,10 @@
     width: calc(70% - 30px); }
   .vendors-page .vendor .meta.links img {
     margin-right: 20px; }
+  .vendors-page .vendor .like-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px; }
+    .vendors-page .vendor .like-btn i {
+      font-size: 40px;
+      color: pink; }

@@ -27,7 +27,7 @@ class TartanBook extends Component {
         const markup = <div key={vendor.id} className="vendor clearfix">
           <div className="image-container" style={imgStyle}></div>
           <div className="meta">
-            <h2>{vendor.title.rendered}</h2>
+            <h2>{vendor.title.rendered}id: {vendor.id}</h2>
             <strong>{vendor.vendor_type}</strong>
             <p><i>{vendor.location}</i></p>
             <p>{vendor.description}</p>
@@ -35,7 +35,14 @@ class TartanBook extends Component {
           <div className="meta links">
             <img alt="instagram logo" src={process.env.PUBLIC_URL + "/images/instagram.png"} width="35" />
             <img alt="website logo" src={process.env.PUBLIC_URL + "/images/website.png"} width="35" />
-            <i className="large material-icons">favorite_border</i><i className="large material-icons">favorite</i>
+          </div>
+          <div className="like-btn">
+            {vendor.liked &&
+              <i className="large material-icons">favorite</i>
+            }
+            {!vendor.liked &&
+              <i className="large material-icons">favorite_border</i>
+            }
           </div>
         </div>;
         //console.log(markup);

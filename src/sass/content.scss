@@ -10,10 +10,14 @@
         margin: 0 auto 15px auto;
     }
     .vendor {
+        position: relative;
         color: #fff;
         background: rgba(64, 84, 100, .8);
         padding: 15px;
         margin-bottom: 30px;
+        h2 {
+            width: calc(100% - 60px;)
+        }
         .image-container {
             float: left;
             width: 30%;
@@ -29,6 +33,15 @@
                 img {
                     margin-right: 20px;
                 }
+            }
+        }
+        .like-btn {
+            position: absolute;
+            top: 15px;
+            right:15px;
+            i {
+                font-size: 40px;
+                color: pink;
             }
         }
     }
