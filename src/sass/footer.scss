@@ -1,27 +1,32 @@
+@import "variables";
+
 footer {
     padding: 60px 0;
     text-align: center;
-    background: #405464;
-    color: #fff;
+    background: $tartan-blue;
+    color: $white;
     a, a:visited {
-        color: pink;
+        color: $tartan-pink;
     }
     .logo {
         width: 90%;
         max-width: 400px;
     }
     nav {
-        margin: 0 auto;
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
+        margin: 30px auto;
         li {
-            float: left;
+            display: inline-block;
             list-style: none;
-            padding-left: 45px;
+            padding-left: 15px;
+            padding-right: 15px;
             font-size: 20px;
             color: #fff;
+        }
+    }
+    .sign-out {
+        cursor: pointer;
+        &:hover {
+            color: $tartan-pink;
         }
     }
 }

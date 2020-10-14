@@ -2,20 +2,11 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import Header from "./Template/Header";
 import Footer from "./Template/Footer";
-//import Login from './Auth/Login';
-//import Tartanbook from './Tartanbook';
+import Welcome from './Content/Welcome';
 import Vendors from './Content/Vendors';
 import Faqs from './Content/Faqs';
 //import VendorsPage from './Pages/VendorsPage';
-import app from './Auth/Base';
-//import TartanBook from './Content/Vendors';
-
-//import { AuthProvider } from './Auth/Auth';
-//import PrivateRoute from './Auth/PrivateRoute';
-
-/* const NotFound = () => {
-  return <h1>404</h1>;
-} */
+//import app from './Auth/Base';
 
 class TartanBook extends Component {
   constructor(props) {
@@ -30,7 +21,7 @@ class TartanBook extends Component {
   }
 
   componentDidMount() {
-    fetch("http://tartanweddings.com/wp-json/wp/v2/tartanbook", {
+    fetch(`${process.env.REACT_APP_VENDORS_ENDPOINT}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -49,11 +40,8 @@ class TartanBook extends Component {
   }
 
   getFilters() {
-    //console.log("getting filters");
     const { allVendors } = this.state;
-
     let vendorTypes = allVendors.map((ven) => {
-      //console.log(ven.vendor_type);
       if (ven.vendor_type) {
         return ven.vendor_type;
       }
@@ -104,8 +92,8 @@ class TartanBook extends Component {
         <Fragment>
         <div className="App">
           <Header />
-            <button style={{ float: "right" }} onClick={() => app.auth().signOut()}>Sign Out</button>  
- 
+            {/* <button style={{ float: "right" }} onClick={() => app.auth().signOut()}>Sign Out</button> */}
+              <Route path="/app/welcome" component={Welcome} />
               <Route path="/app/help" component={Faqs} />  
               <Route exact path="/app/vendors">
                 <Vendors
@@ -116,9 +104,7 @@ class TartanBook extends Component {
                   vendorFilters={vendorFilters}
                   locationFilters={locationFilters} />
               </Route>
-              {/* </Switch>
-              </Router>    */}
-            <Redirect to="/app/vendors" />
+            <Redirect to="/app/welcome" />
             <Footer />           
         </div>
         </Fragment>

@@ -12,6 +12,9 @@ body {
     font-size: 40px; }
   body h1 {
     color: #405464; }
+  body p {
+    color: #405464;
+    font-size: 18px; }
   body .center {
     text-align: center; }
   body select {
@@ -91,7 +94,8 @@ header {
       float: left;
       list-style: none;
       padding-left: 45px;
-      font-size: 20px;
+      font-size: 18px;
+      font-weight: 700;
       color: #fff; }
 
 @media screen and (max-width: 800px) {
@@ -115,22 +119,26 @@ footer {
     width: 90%;
     max-width: 400px; }
   footer nav {
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%); }
+    margin: 30px auto; }
     footer nav li {
-      float: left;
+      display: inline-block;
       list-style: none;
-      padding-left: 45px;
+      padding-left: 15px;
+      padding-right: 15px;
       font-size: 20px;
       color: #fff; }
+  footer .sign-out {
+    cursor: pointer; }
+    footer .sign-out:hover {
+      color: pink; }
 
 .tartanbook {
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto; }
+
+.vendors-page p {
+  color: #fff; }
 
 .vendors-page .filters {
   max-width: 500px;
@@ -173,3 +181,21 @@ footer {
     width: 100%;
     padding: 15px;
     margin-bottom: 20px; }
+  .login-page button {
+    background: red; }
+
+.welcome .title-wrap {
+  text-align: center; }
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .grid .item {
+    float: left;
+    justify-content: flex-start;
+    background: pink;
+    width: 32%;
+    padding-top: 15%;
+    margin-bottom: 18px; }

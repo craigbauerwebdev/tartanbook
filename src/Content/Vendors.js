@@ -22,7 +22,8 @@ class TartanBook extends Component {
       randomVendors.map((vendor) => {
         const imgStyle = {
           backgroundImage: "url("+vendor.fimg_url+")",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
+          backgroundPosition: "top"
         }
         const markup = <div key={vendor.id} className="vendor clearfix">
           <div className="image-container" style={imgStyle}></div>

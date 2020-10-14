@@ -3,6 +3,9 @@
   max-width: 1000px;
   margin: 0 auto; }
 
+.vendors-page p {
+  color: #fff; }
+
 .vendors-page .filters {
   max-width: 500px;
   margin: 0 auto 15px auto; }

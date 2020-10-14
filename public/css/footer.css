@@ -9,14 +9,15 @@ footer {
     width: 90%;
     max-width: 400px; }
   footer nav {
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%); }
+    margin: 30px auto; }
     footer nav li {
-      float: left;
+      display: inline-block;
       list-style: none;
-      padding-left: 45px;
+      padding-left: 15px;
+      padding-right: 15px;
       font-size: 20px;
       color: #fff; }
+  footer .sign-out {
+    cursor: pointer; }
+    footer .sign-out:hover {
+      color: pink; }

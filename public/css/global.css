@@ -12,6 +12,9 @@ body {
     font-size: 40px; }
   body h1 {
     color: #405464; }
+  body p {
+    color: #405464;
+    font-size: 18px; }
   body .center {
     text-align: center; }
   body select {

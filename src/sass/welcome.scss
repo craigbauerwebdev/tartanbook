@@ -1,0 +1,20 @@
+.welcome {
+    .title-wrap {
+        text-align: center;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .item {
+        float: left;
+        justify-content: flex-start;
+        background: pink;
+        width: 32%;
+        padding-top: 15%;
+        margin-bottom: 18px;
+    }
+}
