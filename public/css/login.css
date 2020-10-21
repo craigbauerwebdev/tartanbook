@@ -3,11 +3,14 @@
   .login-page .form-wrap {
     max-width: 400px;
     margin: 0 auto; }
-  .login-page label, .login-page input, .login-page button {
-    display: block; }
-  .login-page input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px; }
-  .login-page button {
-    background: red; }
+    .login-page .form-wrap label, .login-page .form-wrap input, .login-page .form-wrap button {
+      display: block; }
+    .login-page .form-wrap input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px; }
+    .login-page .form-wrap button {
+      color: #fff;
+      background: #405464;
+      padding: 8px 24px;
+      border: none; }

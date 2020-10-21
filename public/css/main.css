@@ -81,15 +81,25 @@ header {
     font-family: 'Roboto Slab', serif;
     color: #fff; }
   header .logo {
-    height: 42px;
+    width: 315px;
     margin-top: 3px;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    /*  @else if $point == baby-bear {
+    @media (max-width: 600px)  { @content; }
+  } */ }
+    @media only screen and (max-width: 550px) {
+      header .logo {
+        width: 85%;
+        max-width: 315px; } }
   header nav {
     margin: 0 auto;
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    /*  @else if $point == baby-bear {
+    @media (max-width: 600px)  { @content; }
+  } */ }
     header nav li {
       float: left;
       list-style: none;
@@ -97,16 +107,24 @@ header {
       font-size: 18px;
       font-weight: 700;
       color: #fff; }
-
-@media screen and (max-width: 800px) {
-  header {
-    text-align: center; }
-    header .filters {
-      position: relative;
-      top: initial;
-      right: initial;
-      transform: none;
-      min-width: 100%; } }
+    @media only screen and (max-width: 800px) {
+      header nav {
+        display: none; } }
+  header .mobile-menu-icon {
+    display: none;
+    color: #fff;
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-55%);
+    cursor: pointer;
+    /*  @else if $point == baby-bear {
+    @media (max-width: 600px)  { @content; }
+  } */ }
+    @media only screen and (max-width: 800px) {
+      header .mobile-menu-icon {
+        display: block; } }
 
 footer {
   padding: 60px 0;
@@ -175,14 +193,17 @@ footer {
   .login-page .form-wrap {
     max-width: 400px;
     margin: 0 auto; }
-  .login-page label, .login-page input, .login-page button {
-    display: block; }
-  .login-page input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px; }
-  .login-page button {
-    background: red; }
+    .login-page .form-wrap label, .login-page .form-wrap input, .login-page .form-wrap button {
+      display: block; }
+    .login-page .form-wrap input {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px; }
+    .login-page .form-wrap button {
+      color: #fff;
+      background: #405464;
+      padding: 8px 24px;
+      border: none; }
 
 .welcome .title-wrap {
   text-align: center; }
@@ -198,4 +219,6 @@ footer {
     background: pink;
     width: 32%;
     padding-top: 15%;
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+    background-size: cover;
+    background-position: top; }

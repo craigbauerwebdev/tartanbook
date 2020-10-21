@@ -1,3 +1,5 @@
+@import "variables";
+
 header {
     background: #405464;
     position: sticky;
@@ -11,9 +13,14 @@ header {
         color: #fff;
     }
     .logo {
-        height: 42px;
+        //height: 42px;
+        width: 315px;
         margin-top: 3px;
         margin-bottom: 8px;
+        @include bp(mobile) {
+            width: 85%;
+            max-width: 315px;
+        }
     }
     nav {
         margin: 0 auto;
@@ -29,18 +36,21 @@ header {
             font-weight: 700;
             color: #fff;
         }
+        @include bp(tablet) {
+            display: none;
+        }
     }
-}
-
-@media screen and (max-width: 800px) {
-    header {
-        text-align: center;
-        .filters {
-            position: relative;
-            top: initial;
-            right: initial;
-            transform: none;
-            min-width: 100%;
+    .mobile-menu-icon {
+        display: none;
+        color: $white;
+        position: absolute;
+        font-size: 30px;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-55%);
+        cursor: pointer;
+        @include bp(tablet) {
+            display: block;
         }
     }
 }
