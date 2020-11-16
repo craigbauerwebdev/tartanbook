@@ -21,6 +21,9 @@ body {
         color: $tartan-blue;
         font-size: 18px;
     }
+    ul {
+        padding: 0;
+    }
     background-image: url("/images/pink-tartan-bkg.jpg");
     background-attachment: fixed;
     .center {
