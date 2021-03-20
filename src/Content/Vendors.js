@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 import Filters from "./Filters";
 
 //import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";

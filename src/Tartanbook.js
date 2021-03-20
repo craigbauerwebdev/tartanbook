@@ -94,7 +94,7 @@ class TartanBook extends Component {
           <Header />
             {/* <button style={{ float: "right" }} onClick={() => app.auth().signOut()}>Sign Out</button> */}
               <Route path="/app/welcome" component={Welcome} />
-              <Route path="/app/help" component={Faqs} />  
+              <Route path="/app/help" component={Faqs} />
               <Route exact path="/app/vendors">
                 <Vendors
                   data={this.state.sortedVendors}
